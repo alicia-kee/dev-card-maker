@@ -10,7 +10,7 @@ const spaceMono = Space_Mono({
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen w-full relative items-center overflow-hidden">
+    <div className="flex flex-col items-center justify-center min-h-screen w-full relative overflow-hidden">
       <main className="flex-grow flex flex-col items-center justify-center">
 
         {/* Background layers */}
