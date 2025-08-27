@@ -94,7 +94,7 @@ export default function Builder(){
             <div className="flex flex-col items-center justify-center flex-wrap bg-indigo-950 p-8 rounded-3xl w-[85%] my-8">
                 <div className={`text-4xl md:text-5xl text-center p-8 ${spaceMono.className} font-bold text-violet-200 text-glow max-w-4xl mb-5`}>Build Your Card</div>
                 
-                <div className="flex flex-row items-center justify-between flex-wrap gap-2 w-[65%] mb-2 text-sm md:text-lg">
+                <div className="flex flex-col items-start justify-center flex-wrap gap-3 w-[65%] mb-5 text-sm md:text-lg">
                     <div className="text-white font-mono">Full Name</div>
                     {/* input box, value is controlled by React, onChange updates input as user types */}
                     <input
@@ -102,62 +102,62 @@ export default function Builder(){
                     placeholder="e.g. Allison Smith"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    className="border px-2 py-1 rounded w-[70%] bg-violet-100 -z-0"
+                    className="border px-2 py-1 rounded w-full bg-violet-100 -z-0"
                     />
                 </div>
 
-                <div className="flex flex-row items-center justify-between flex-wrap gap-2 w-[65%] mb-2 text-sm md:text-lg">
+                <div className="flex flex-col items-start justify-center flex-wrap gap-3 w-[65%] mb-5 text-sm md:text-lg">
                     <div className="text-white font-mono">Title</div>
                     <input
                     type="text"
                     placeholder="e.g. University Student, Software Develop I, etc."
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
-                    className="border px-2 py-1 rounded w-[70%] bg-violet-100 -z-0"
+                    className="border px-2 py-1 rounded w-full bg-violet-100 -z-0"
                     />
                 </div>
 
-                <div className="flex flex-row items-center justify-between flex-wrap gap-2 w-[65%] mb-2 text-sm md:text-lg">
+                <div className="flex flex-col items-start justify-center flex-wrap gap-3 w-[65%] mb-5 text-sm md:text-lg">
                     <div className="text-white font-mono">Education</div>
                     <input
                     type="text"
                     placeholder="e.g. University of Manitoba, Bachelor of Computer Science"
                     value={education}
                     onChange={(e) => setEducation(e.target.value)}
-                    className="border px-2 py-1 rounded  w-[70%] bg-violet-100 -z-0"
+                    className="border px-2 py-1 rounded w-full bg-violet-100 -z-0"
                     />
                 </div>
 
-                <div className="flex flex-row items-center justify-between flex-wrap gap-2 w-[65%] mb-2 text-sm md:text-lg">
+                <div className="flex flex-col items-start justify-between flex-wrap gap-3 w-[65%] mb-5 text-sm md:text-lg">
                     <div className="text-white font-mono">Email</div>
                     <input
                     type="text"
                     placeholder="e.g. asmith405@gmail.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="border px-2 py-1 rounded  w-[70%] bg-violet-100 -z-0"
+                    className="border px-2 py-1 rounded w-full bg-violet-100 -z-0"
                     />
                 </div>
 
-                <div className="flex flex-row items-center justify-between flex-wrap gap-2 w-[65%] mb-2 text-sm md:text-lg">
+                <div className="flex flex-col items-start justify-between flex-wrap gap-3 w-[65%] mb-5 text-sm md:text-lg">
                     <div className="text-white font-mono">Github URL</div>
                     <input
                     type="text"
                     placeholder="e.g. https://github.com/al-smith"
                     value={github}
                     onChange={(e) => setGithub(e.target.value)}
-                    className="border px-2 py-1 rounded  w-[70%] bg-violet-100 -z-0"
+                    className="border px-2 py-1 rounded w-full bg-violet-100 -z-0"
                     />
                 </div>
 
-                <div className="flex flex-row items-center justify-between flex-wrap gap-2 w-[65%] mb-2 text-sm md:text-lg">
+                <div className="flex flex-col items-start justify-between flex-wrap gap-3 w-[65%] mb-5 text-sm md:text-lg">
                     <div className="text-white font-mono">LinkedIn URL</div>
                     <input
                     type="text"
                     placeholder="e.g. www.linkedin.com/in/allison-smith"
                     value={linkedin}
                     onChange={(e) => setLinkedin(e.target.value)}
-                    className="border px-2 py-1 rounded  w-[70%] bg-violet-100 -z-0"
+                    className="border px-2 py-1 rounded  w-full bg-violet-100 -z-0"
                     />
                 </div>
 
@@ -173,9 +173,9 @@ export default function Builder(){
                 </div> */}
 
 
-                <div className="flex flex-row items-center justify-between w-[65%] mb-2 gap-3 text-sm md:text-lg">
+                <div className="flex flex-col items-start justify-between flex-wrap gap-1 w-[65%] mb-5 text-sm md:text-lg">
                     <label className="text-white font-mono">Languages</label>
-                    <div className="flex flex-col gap-2 w-[70%]">
+                    <div className="flex flex-col gap-2 w-full">
                         {/* .map() loops through all items and creates a small tag (label) for each language with option to delete it */}
                         <div className="flex flex-row flex-wrap gap-2 p-2 rounded">
                             {languages.map((lang, i) => (
@@ -193,14 +193,14 @@ export default function Builder(){
                             onChange={(e) => setLangInput(e.target.value)}
                             onKeyDown={handleEnterLanguages}
                             placeholder="Type and press Enter (e.g. Java)"
-                            className="border px-2 py-1 rounded bg-violet-100 -z-0 w-full mb-3"
+                            className="border px-2 py-1 rounded bg-violet-100 -z-0 w-full mb-2"
                         />
                     </div>
                 </div>
 
-                <div className="flex flex-row items-center justify-between w-[65%] mb-2 gap-3 text-sm md:text-lg">
+                <div className="flex flex-col items-start justify-between flex-wrap gap-1 w-[65%] mb-5 text-sm md:text-lg">
                     <label className="text-white font-mono">Frameworks</label>
-                    <div className="flex flex-col gap-2 w-[70%]">
+                    <div className="flex flex-col gap-2 w-full">
                         {/* .map() loops through all items and creates a small tag (label) for each language with option to delete it */}
                         <div className="flex flex-row flex-wrap gap-2 p-2 rounded">
                             {frameworks.map((lang, i) => (
@@ -218,14 +218,14 @@ export default function Builder(){
                             onChange={(e) => setFrameInput(e.target.value)}
                             onKeyDown={handleEnterFrameworks}
                             placeholder="Type and press Enter (e.g. React)"
-                            className="border px-2 py-1 rounded bg-violet-100 -z-0 w-full mb-3"
+                            className="border px-2 py-1 rounded bg-violet-100 -z-0 w-full mb-2"
                         />
                     </div>
                 </div>
 
 
-                <button onClick={handleSubmit} className="mt-6 -z-0 bg-gradient-to-r from-purple-900 via-purple to-fuchsia-900 text-white text-xl font-mono font-semibold px-20 py-3 rounded-lg shadow-lg hover:bg-stone-800 hover:bg-none hover:scale-105 transition-transform cursor-pointer border-2 border-violet-200">
-                    Preview
+                <button onClick={handleSubmit} className="text-xs md:text-lg mt-6 -z-0 bg-gradient-to-r from-purple-900 via-purple to-fuchsia-900 text-white text-xl font-mono font-semibold px-20 py-3 rounded-lg shadow-lg hover:bg-stone-800 hover:bg-none hover:scale-105 transition-transform cursor-pointer border-2 border-violet-200">
+                    Submit & Preview
                 </button>
 
             </div>
