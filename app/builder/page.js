@@ -16,14 +16,12 @@ export default function Builder(){
     const router = useRouter();
 
     //track values of inputs (create state variables) (local state)
-    const [fullName, setFullName] = useState(cardData.name);
+    const [fullName, setFullName] = useState(cardData.fullName);
     const [title, setTitle] = useState(cardData.title);
     const [education, setEducation] = useState(cardData.education);
     const [email, setEmail] = useState(cardData.email);
     const [github, setGithub] = useState(cardData.github);
     const [linkedin, setLinkedin] = useState(cardData.linkedin);
-    //const [languages, setLanguages] = useState(cardData.languages.join(", ")); //array, join(", ") so it fits into a text box
-    //const [frameworks, setFrameworks] = useState(cardData.frameworks.join(", ")); //array
     const [langInput, setLangInput] = useState(""); //text being currently typed by user
     const [languages, setLanguages] = useState([]); //array of languages, initially empty []
     const [frameInput, setFrameInput] = useState(""); 
@@ -74,7 +72,6 @@ export default function Builder(){
         router.push("/preview");
     };
 
-    
 
 
     return(

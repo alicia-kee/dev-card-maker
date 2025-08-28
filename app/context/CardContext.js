@@ -7,11 +7,14 @@ const CardContext = createContext(); /**empty storage for data */
 export function CardProvider({children}) {
     //create state for card info (start with empty info), cardData is current stored info, setCardData is the function to update info:
     const [cardData, setCardData] = useState({
-        name: "",
+        fullName: "",
         title: "",
+        education: "",
+        email: "",
+        github: "",
+        linkedin: "",
         languages: [],
         frameworks: [],
-        education: "",
     });
 
     return(
